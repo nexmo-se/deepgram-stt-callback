@@ -1,0 +1,15 @@
+{
+  "name": "deepgram-callback-sample",
+  "version": "1.0.0",
+  "description": "Sample Node.js app for Deepgram STT callback demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@deepgram/sdk": "^4.11.2",
+    "body-parser": "^1.20.2",
+    "dotenv": "^17.2.2",
+    "express": "^4.18.2"
+  }
+}
