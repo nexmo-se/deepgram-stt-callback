@@ -6,14 +6,12 @@ const fs = require("fs");
 const https = require("https");
 
 let apiKey, audioPath, callbackUrl;
+// If provided two arguments (audio file and callback URL),
+// use the API key from the .env file (process.env.DEEPGRAM_API_KEY)
 if (process.argv.length === 4) {
   apiKey = process.env.DEEPGRAM_API_KEY;
   audioPath = process.argv[2];
   callbackUrl = process.argv[3];
-} else if (process.argv.length === 5) {
-  apiKey = process.argv[2];
-  audioPath = process.argv[3];
-  callbackUrl = process.argv[4];
 } else {
   console.error(
     "Usage: node send-to-deepgram.js <AUDIO_FILE_PATH> <CALLBACK_URL>"
